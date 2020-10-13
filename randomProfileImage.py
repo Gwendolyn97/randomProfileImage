@@ -11,18 +11,15 @@ consumer_secret = os.getenv("consumer_secret")
 access_token = os.getenv("access_token")
 access_secret = os.getenv("access_secret")
 
-def twitter():  #returns api so that i dont have to copy and paste this in every fucking bit i want to use the twitter api 
-                #like holy fucking shit there has to be an easier way to do thi 78y6juhigtbn
+directory = r"C:\\Users\\Gwendolyn\Desktop\Bots (Twitter)\\Random Profile Image\\images"
+
+
+def twitter():                  
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_secret)
 
     api = tweepy.API(auth)
     return api
-
-directory = r"C:\\Users\\Gwendolyn\Desktop\Bots (Twitter)\\Random Profile Image\\images"
-
-print(f"{os.listdir(directory)}")
-
 
 def bot(): 
     try: 
